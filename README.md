@@ -34,11 +34,14 @@ include the following itemsets:
 A37787I8C184FW AWE8HU0AZKASV A3UIATN5XW74NQ (4)
 A3Y9BX5AS769T AWE8HU0AZKASV A3UIATN5XW74NQ (5)
 AZ7I5GAJZA3JO A28R83ADQPMF2X A2GKW94L6HRND7 A2IE7YPWUYZAXS (4)
+
+
 The first itemset is a frequent 3 itemset having a support count of 4 (i.e., appears 4 times in the data, satisfies the min_sup = 4
 and hence frequent). The second itemset is a frequent 3 itemset with a support of 5 (i.e., it appears 5 times in the transaction
 database). The last itemset is a frequent 4 itemset with a support of 4. Notice that itemsets appearing less than min_sup=4 times 
 should not be retrieved for the above query. There are 53 frequent 3 + itemsets with min_sup=4. The above three are only a few of
 the total 53 frequent 3 + itemsets retrieved for min_sup = 4, 𝑘𝑘 = 3.
+
 ii. min_sup = 5, 𝑘𝑘 = 3
 This would yield all itemsets appearing at least 5 times (i.e., 5 or more) and containing at least 3 elements. We have exactly 4 such
 itemsets. The complete result set for the above query is given as follows:
@@ -46,15 +49,16 @@ A9TJYY7P2R280 A2S9IDC1IZH7WN AYFQ8ML2PYZ1D (5)
 A3PXX92YUMGMBG A3UIATN5XW74NQ AWE8HU0AZKASV (5)
 A2J96R1J6MDMEV A3UIATN5XW74NQ AWE8HU0AZKASV (5)
 A3Y9BX5AS769T A3UIATN5XW74NQ AWE8HU0AZKASV (5)
+
 iii. min_sup = 8, 𝑘𝑘 = 2
 This would return the following frequent 2 + itemsets
 A20JYIHL1W1U54 A7Y6AVS576M03 (10)
 AO2V6YDDYQ2CR A5JLAU2ARJ0BO (8)
 A2AEZQ3DGBBLPR A231WM2Z2JL0U3 (8)
 A231WM2Z2JL0U3 A5JLAU2ARJ0BO (11)
+
 Notice that there are no frequent 3 itemsets with min_sup = 8 in our data. And since there are no frequent 3 itemsets, we don’t have
-any frequent itemsets with larger sizes (based on the downward closure property), thus the query min_sup = 8, 𝑘𝑘 = 3 would
-yield no itemsets. Similarly, the following queries too yields no frequent itemsets:
+any frequent itemsets with larger sizes (based on the downward closure property), thus the query min_sup = 8, 𝑘𝑘 = 3 would yield no itemsets. Similarly, the following queries too yields no frequent itemsets:
 min_sup = 4, 𝑘𝑘 = 5
 min_sup = 6, 𝑘𝑘 = 3
 iv. min_sup = 7, 𝑘𝑘 = 2
@@ -68,10 +72,12 @@ A1E7QLJVWNFOZY A2ZM9BGE3K3SY2 (7)
 A2AEZQ3DGBBLPR A231WM2Z2JL0U3 (8)
 A3PPXFIVMJ9MV8 AUPUZ14778SD7 (7)
 A231WM2Z2JL0U3 A5JLAU2ARJ0BO (11)
+
 v. min_sup = 10, 𝑘𝑘 = 2
 This is a subset of query (iii) as we have increased the min_sup. The result is given below:
 A20JYIHL1W1U54 A7Y6AVS576M03 (10)
 A231WM2Z2JL0U3 A5JLAU2ARJ0BO (11)
+
 vi. min_sup = 75, 𝑘𝑘 = 1
 This yield itemsets having at least 1 element and appearing at least 75 time sin the data. It turns out we only have 9 frequent 1-
 itemsets as follows:
@@ -84,6 +90,8 @@ A2AEZQ3DGBBLPR (91)
 A2ZM9BGE3K3SY2 (92)
 A231WM2Z2JL0U3 (209)
 A5JLAU2ARJ0BO (323)
+
+
 5. Full Output and Demo
 You will be evaluated on two aspects in this homework when you demo it. In the actual demo new values of min_sup and 𝑘𝑘 will
 be given and you are required to run your implementation and produce the result, i.e, generate all frequent 𝑘𝑘 + itemsets appearing
